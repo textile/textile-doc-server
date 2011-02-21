@@ -5,7 +5,7 @@ set :cache, Dalli::Client.new('localhost:11211', :compression => true)
 
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/lib')
 require 'textile_spec'
-TextileSpec::Index.remote_index_yaml_uri = "#{settings.root}/../spec/index.yaml"
+TextileSpec::Index.remote_index_yaml_uri = "https://github.com/jgarber/textile-spec/raw/master/index.yaml"
 
 layout 'layout'
 set :haml, :format => :html5
