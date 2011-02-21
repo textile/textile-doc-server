@@ -1,3 +1,24 @@
-h1. Textile Specifications
+h1. Textile Cookbook - Doc. Server
 
-These are the specifications for the Textile markup language. Each implementation (libraries for PHP, Ruby, Python, etc.) can use them to make sure it is compliant. If the implementation uses git, the specifications can be incorporated as a git submodule and parsed with a YAML library for your platform.
+Serves formatted documentation from the Textile spec.
+
+h2. Running locally
+
+# @gem install bundler@ # may require sudo or root
+# @cd doc-server@
+# @bundle install@
+# @memcached -d@
+# @shotgun config.ru@
+# Visit http://localhost:9393/
+
+h2. Requirements
+
+* Ruby 1.9.2
+* Bundler gem
+* Memcached server
+
+h2. Running the specs
+
+To run the Sinatra web app's specifications, just run @rake@.
+
+To run the Textile specifications, which the Sinatra app formats and serves, consult your Textile implementation.
