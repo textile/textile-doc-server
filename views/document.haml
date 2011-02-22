@@ -11,6 +11,7 @@
   .example-group
     %h2= heading
     - examples.each do |example_title, example|
+      - next if example_title.is_a?(Symbol)
       - unless example_title == heading
         %h3= example_title 
       .example.clearfix{:id => example_title.gsub(" ", '-')}

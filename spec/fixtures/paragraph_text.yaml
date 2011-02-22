@@ -12,6 +12,10 @@ Simple paragraphs:
       p. This is another.'
     desc: <p>You can explicitly identify a paragraph with <code>p. </code> (p-period-space)
       before the paragraph.</p>
+  :inline_signature:
+    desc: Paragraph signature inline is not a paragraph.
+    input: "I saw a ship. It was big."
+    output: "<p>I saw a ship. It was big.</p>"
 Line breaks:
   Line breaks:
     input: ! 'Roses are red,
