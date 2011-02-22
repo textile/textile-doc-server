@@ -15,7 +15,7 @@
         %h3= example_title 
       .example.clearfix{:id => example_title.gsub(" ", '-')}
         .desc
-          = example['desc']
+          = RedCloth.new(example['desc']).to_html
         .input
           .type Textile
           %pre&= example['input']
