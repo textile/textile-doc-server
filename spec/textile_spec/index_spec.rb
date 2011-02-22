@@ -52,7 +52,7 @@ describe TextileSpec::Index do
     it "should set the data in the cache the first time" do
       expect {
         TextileSpec::Index.new
-      }.to change { settings.cache.get(TextileSpec::Index.remote_index_yaml_uri) }
+      }.to change { settings.cache.get(settings.remote_index_yaml_uri) }
     end
     
     it "should subsequently load the data from the cache, not file" do

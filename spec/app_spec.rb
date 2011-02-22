@@ -23,7 +23,7 @@ describe "Docs App" do
     get '/'
     expect {
       post '/specs/flush/'
-    }.to change { settings.cache.get(TextileSpec::Index.remote_index_yaml_uri) }.to(nil)
+    }.to change { settings.cache.get(settings.remote_index_yaml_uri) }.to(nil)
     
   end
 end

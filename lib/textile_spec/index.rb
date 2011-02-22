@@ -2,12 +2,9 @@ module TextileSpec
   class Index < OpenStruct
     include YamlCache
     attr_reader :file
-    class << self
-      attr_accessor :remote_index_yaml_uri
-    end
     
     def initialize(yaml_uri=nil)
-      @file = yaml_uri || self.class.remote_index_yaml_uri
+      @file = yaml_uri || settings.remote_index_yaml_uri
       super(index_data)
     end
     
