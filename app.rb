@@ -7,7 +7,7 @@ set :remote_index_yaml_uri, "#{settings.root}/../textile-spec/index.yaml"
 configure :production, :test do
   require 'dalli'
   set :cache, Dalli::Client.new('localhost:11211', :compression => true)
-  set :remote_index_yaml_uri, "https://github.com/jgarber/textile-spec/raw/master/index.yaml"
+  set :remote_index_yaml_uri, "https://github.com/textile/textile-spec/raw/master/index.yaml"
 end
 
 layout 'layout'
