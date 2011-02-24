@@ -1,3 +1,4 @@
+require 'psych'
 YAML::ENGINE.yamler = 'psych'
 
 module TextileSpec
