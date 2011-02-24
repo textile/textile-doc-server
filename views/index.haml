@@ -8,3 +8,7 @@
   - @documents.each do |document|
     %li
       %a{:href => "/#{document.slug}/"}= document.title
+%p
+  .spec_reference
+    Spec source:
+    %a{:href => @index.file}= @index.file
