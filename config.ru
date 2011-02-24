@@ -1,5 +1,8 @@
-require 'psych'
-YAML::ENGINE.yamler = 'psych'
+begin
+  require 'psych'
+  YAML::ENGINE.yamler = 'psych'
+rescue LoadError
+end
 
 require 'rubygems'
 require 'bundler'
