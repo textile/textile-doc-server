@@ -1,6 +1,3 @@
-require 'psych'
-YAML::ENGINE.yamler = 'psych'
-
 module TextileSpec
   module YamlCache
     def load_yaml

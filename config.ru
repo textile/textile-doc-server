@@ -1,3 +1,6 @@
+require 'psych'
+YAML::ENGINE.yamler = 'psych'
+
 require 'rubygems'
 require 'bundler'
 
