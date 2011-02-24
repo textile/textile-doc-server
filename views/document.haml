@@ -22,11 +22,9 @@
           %pre&= example['input']
         .html{:style => "display:none"}
           .type HTML
-          %pre&= RedCloth.new(example['input']).to_html
+          %pre&= example['output']
         .output
           .type Browser
-          .output-inner
-            :textile
-              #{example['input']}
+          .output-inner~ example['output']
 %p
   %a{:href => '/'} Back to index
