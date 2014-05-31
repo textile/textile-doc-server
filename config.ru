@@ -1,5 +1,6 @@
 begin
   require 'psych'
+  require 'yaml'
   YAML::ENGINE.yamler = 'psych'
 rescue LoadError
 end
